@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Premium – Zdrowy Start</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; padding: 2rem; background: #fff; }
+    h1 { color: #2f855a; }
+    p { max-width: 700px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Plan Premium</h1>
+  <p>
+    Pełna wersja 14-dniowego planu premium do pobrania w PDF. Zawiera kompletne jadłospisy,
+    listy zakupów, porady i wsparcie.
+  </p>
+</body>
+</html>
