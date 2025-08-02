@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wegetariańsko | Zdrowy Start</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #d7ffe7);
+      color: #1a1a1a;
+    }
+    header {
+      background: #ffffff;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #388e3c;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #2e7031;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1603052875532-690f908a9d7b') center/cover;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .section {
+      padding: 60px 5%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #2e7031;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 24px;
+      transition: all 0.3s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card h3 {
+      color: #3f704d;
+      margin-bottom: 12px;
+    }
+    footer {
+      background: #2e7031;
+      color: #ffffff;
+      padding: 40px 5%;
+      text-align: center;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Zdrowy Start</h2>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="fit.html">Fit</a>
+      <a href="tanio.html">Tanio</a>
+      <a href="wege.html">Wegetariańsko</a>
+      <a href="keto.html">Keto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Wegetariański styl życia – smacznie, lekko i zdrowo!</h1>
+  </section>
+
+  <section class="section">
+    <h2>Dlaczego warto przejść na wege?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Korzyści zdrowotne</h3>
+        <p>Wegetarianizm obniża ryzyko chorób serca, nadciśnienia i otyłości. Czujesz się lekko i masz więcej energii!</p>
+      </div>
+      <div class="card">
+        <h3>Wpływ na planetę</h3>
+        <p>Dieta roślinna wymaga mniej zasobów – to najlepszy krok dla Ziemi. Zmniejsz ślad węglowy bez wysiłku.</p>
+      </div>
+      <div class="card">
+        <h3>Różnorodność smaków</h3>
+        <p>To nie tylko sałata! Ciecierzyca, tofu, curry, pierogi z soczewicą – eksplozja roślinnych możliwości.</p>
+      </div>
+      <div class="card">
+        <h3>Plan tygodniowy</h3>
+        <p>Gotowy 7-dniowy plan posiłków z przepisami i listą zakupów. Oszczędzaj czas i jedz zdrowo.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Zdrowy Start – Naturalnie Wegetariańsko © 2025
+  </footer>
+</body>
+</html>
