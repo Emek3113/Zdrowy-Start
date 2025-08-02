@@ -25,12 +25,12 @@
       z-index: 10;
     }
     header img {
-      height: 32px;
+      height: 40px;
       margin-right: 0.5rem;
     }
     nav a {
       margin: 0 1rem;
-      color: #000;
+      color: #2f855a;
       text-decoration: none;
       font-weight: 600;
       position: relative;
@@ -50,28 +50,29 @@
     }
     .hero {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
       padding: 5rem 2rem 3rem;
       background: white;
-      animation: fadeIn 1.2s ease-in-out;
     }
     .hero img {
-      max-width: 280px;
+      max-width: 320px;
+      width: 100%;
       object-fit: contain;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
     .hero-content {
       max-width: 500px;
       margin-left: 2rem;
     }
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      color: #2f855a;
     }
     .hero a {
       display: inline-block;
@@ -91,65 +92,18 @@
       gap: 2rem;
       padding: 4rem 2rem;
       background: #f9fafb;
-      animation: fadeIn 1.2s ease-in-out;
     }
     .features div {
       text-align: center;
       max-width: 160px;
     }
     .features img {
-      height: 48px;
-      object-fit: contain;
+      height: 64px;
       margin-bottom: 0.5rem;
     }
-    .premium {
-      padding: 4rem 2rem;
-      background: white;
-      text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    .premium h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    .premium .price {
-      display: inline-block;
-      background: #c6f6d5;
-      color: #1a1a1a;
-      padding: 0.8rem 1.2rem;
-      border-radius: 16px;
-      margin-top: 1rem;
-      font-weight: bold;
-      font-size: 1.2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    section#about, section#contact, section#blog {
-      padding: 4rem 2rem;
-      background: #f9fafb;
-      text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    form {
-      max-width: 400px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    button {
-      padding: 0.75rem;
-      background: #2f855a;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+    .features p {
       font-weight: 600;
+      color: #2d3748;
     }
     footer {
       background: #2f855a;
@@ -157,26 +111,25 @@
       text-align: center;
       padding: 2rem;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;"><img src="https://img.icons8.com/color/48/leaf.png" alt="logo"> <strong>Zdrowy Start</strong></div>
+    <div style="display: flex; align-items: center;">
+      <img src="https://via.placeholder.com/100x40?text=Logo" alt="logo">
+      <strong>Zdrowy Start</strong>
+    </div>
     <nav>
-      <a href="#free">Plan Free</a>
-      <a href="#premium">Plan Premium</a>
-      <a href="#blog">Blog</a>
-      <a href="#about">O nas</a>
-      <a href="#contact">Kontakt</a>
+      <a href="#">Plan Free</a>
+      <a href="#">Plan Premium</a>
+      <a href="#">Blog</a>
+      <a href="#">O nas</a>
+      <a href="#">Kontakt</a>
     </nav>
   </header>
 
   <section class="hero">
-    <img src="https://i.imgur.com/L3PhsIV.png" alt="ebook premium zdrowy start">
+    <img src="https://via.placeholder.com/320x400?text=Ebook+Zdrowy+Start" alt="ebook premium zdrowy start">
     <div class="hero-content">
       <h1>UNIWERSALNY PLAN ZDROWEGO ODŻYWIANIA – WYBIERZ STYL ŻYCIA, NIE KOMPROMISY</h1>
       <a href="#">Pobierz darmowy plan (2 dni)</a>
@@ -185,47 +138,21 @@
 
   <section class="features">
     <div>
-      <img src="https://img.icons8.com/emoji/48/leaf-fluttering-in-wind.png" alt="fit">
+      <img src="https://via.placeholder.com/64?text=Fit" alt="fit">
       <p>Fit</p>
     </div>
     <div>
-      <img src="https://img.icons8.com/emoji/48/money-with-wings.png" alt="tanio">
+      <img src="https://via.placeholder.com/64?text=Tanio" alt="tanio">
       <p>Tanio</p>
     </div>
     <div>
-      <img src="https://img.icons8.com/emoji/48/broccoli.png" alt="wege">
+      <img src="https://via.placeholder.com/64?text=Wege" alt="wege">
       <p>Wegetariańsko</p>
     </div>
     <div>
-      <img src="https://img.icons8.com/emoji/48/cut-of-meat.png" alt="keto">
+      <img src="https://via.placeholder.com/64?text=Keto" alt="keto">
       <p>Keto</p>
     </div>
-  </section>
-
-  <section class="premium" id="premium">
-    <h2>ZAMÓW WERSJĘ PREMIUM</h2>
-    <p>Zdrowy Start to kompletne plany żywieniowe gotowe do wdrożenia.</p>
-    <div class="price">9,90 zł - Kup teraz</div>
-  </section>
-
-  <section id="blog">
-    <h2>PRZEPISY I WSKAZÓWKI</h2>
-    <p>Nowości, porady żywieniowe, darmowe przepisy i inspiracje zdrowego stylu życia.</p>
-  </section>
-
-  <section id="about">
-    <h2>O NAS</h2>
-    <p>Zdrowy Start to projekt tworzony przez specjalistów od żywienia i zdrowia.</p>
-  </section>
-
-  <section id="contact">
-    <h2>KONTAKT</h2>
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Imię" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
-      <button type="submit">Wyślij</button>
-    </form>
   </section>
 
   <footer>
