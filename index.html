@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zdrowy Start – Twój plan zdrowego odżywiania</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+    header { background: #64bc6e; color: white; padding: 2rem 1rem; text-align: center; }
+    nav { background: #4fa35a; padding: 0.5rem; text-align: center; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    section { padding: 2rem 1rem; max-width: 800px; margin: auto; }
+    .cta { background: #f4f4f4; padding: 2rem; text-align: center; }
+    .cta a { display: inline-block; background: #64bc6e; color: white; padding: 0.75rem 1.5rem; margin-top: 1rem; text-decoration: none; border-radius: 4px; }
+    footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+    .plan { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; text-align: center; margin-top: 2rem; }
+    .plan div { background: #e3f5e7; padding: 1rem; border-radius: 8px; }
+    form { display: flex; flex-direction: column; gap: 0.5rem; max-width: 400px; margin: auto; }
+    input, textarea { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 0.75rem; background: #64bc6e; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zdrowy Start</h1>
+    <p>Uniwersalny plan zdrowego odżywiania – FIT • TANIO • WEGE • KETO</p>
+  </header>
+
+  <nav>
+    <a href="#free">Plan Free</a>
+    <a href="#premium">Plan Premium</a>
+    <a href="#about">O nas</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <section id="free">
+    <h2>Darmowy Plan (2 dni)</h2>
+    <p>Pobierz próbkę naszego 14-dniowego planu żywieniowego – zawiera po 1 dniu z każdej wersji diety: FIT, TANIO, WEGE, KETO. Zawiera też listy zakupów, planner i tracker nawodnienia.</p>
+    <div class="cta">
+      <p><strong>Pobierz za darmo i zacznij jeść zdrowiej już dziś!</strong></p>
+      <a href="#">Pobierz darmowy PDF</a>
+    </div>
+  </section>
+
+  <section id="premium">
+    <h2>Pełna wersja – 14 dni</h2>
+    <p>Wersja premium zawiera aż 56 pełnych posiłków, 4 różne style diety, planery, porady zakupowe, dodatkowe przepisy i więcej.</p>
+    <div class="plan">
+      <div><strong>FIT</strong><br/>do 1800 kcal</div>
+      <div><strong>TANIO</strong><br/>15 zł dziennie</div>
+      <div><strong>WEGE</strong><br/>bez mięsa</div>
+      <div><strong>KETO</strong><br/>low carb</div>
+    </div>
+    <div class="cta">
+      <p><strong>Dostęp natychmiastowy – tylko 9,90 zł</strong></p>
+      <a href="#">Kup wersję premium</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>O nas</h2>
+    <p>Projekt <strong>Zdrowy Start</strong> powstał z myślą o osobach, które chcą zacząć zdrowiej jeść, ale nie mają czasu, pieniędzy lub pomysłu na planowanie posiłków. Udostępniamy gotowe, praktyczne rozwiązania w formie PDF do natychmiastowego wdrożenia.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Imię" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Zdrowy Start. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+</body>
+</html>
