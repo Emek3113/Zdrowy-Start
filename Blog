@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Zdrowy Start</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; padding: 2rem; background: #f9fafb; }
+    h1 { color: #2f855a; }
+    article { margin-top: 2rem; max-width: 800px; }
+    h2 { margin-bottom: 0.5rem; }
+    p { margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Blog Zdrowego Startu</h1>
+  <article>
+    <h2>Jak zacząć zdrowiej jeść?</h2>
+    <p>Małe kroki prowadzą do wielkich zmian. Zacznij od wody, warzyw i ograniczenia przetworzonej żywności.</p>
+  </article>
+  <article>
+    <h2>5 szybkich posiłków do pracy</h2>
+    <p>Zdrowe jedzenie może być szybkie – poznaj 5 sprawdzonych pomysłów na lunch do pudełka.</p>
+  </article>
+</body>
+</html>
