@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Free – Zdrowy Start</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; padding: 2rem; background: #f0f4f8; }
+    h1 { color: #2f855a; }
+    p { max-width: 700px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Darmowy Plan Zdrowego Startu</h1>
+  <p>
+    Otrzymaj darmowy 2-dniowy plan odżywiania, który pomoże Ci rozpocząć zdrowszy styl życia.
+    Zawiera przykładowe przepisy, zakupy oraz porady.
+  </p>
+</body>
+</html>
