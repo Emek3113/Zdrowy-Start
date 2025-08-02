@@ -55,7 +55,6 @@
       flex-wrap: wrap;
       padding: 5rem 2rem 3rem;
       background: white;
-      animation: fadeIn 1.2s ease-in-out;
     }
     .hero img {
       max-width: 280px;
@@ -91,7 +90,6 @@
       gap: 2rem;
       padding: 4rem 2rem;
       background: #f9fafb;
-      animation: fadeIn 1.2s ease-in-out;
     }
     .features div {
       text-align: center;
@@ -102,130 +100,51 @@
       object-fit: contain;
       margin-bottom: 0.5rem;
     }
-    .premium {
-      padding: 4rem 2rem;
-      background: white;
-      text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    .premium h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    .premium .price {
-      display: inline-block;
-      background: #c6f6d5;
-      color: #1a1a1a;
-      padding: 0.8rem 1.2rem;
-      border-radius: 16px;
-      margin-top: 1rem;
-      font-weight: bold;
-      font-size: 1.2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    section#about, section#contact, section#blog {
-      padding: 4rem 2rem;
-      background: #f9fafb;
-      text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    form {
-      max-width: 400px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    button {
-      padding: 0.75rem;
-      background: #2f855a;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-    }
     footer {
       background: #2f855a;
       color: white;
       text-align: center;
       padding: 2rem;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;"><img src="https://img.icons8.com/color/48/leaf.png" alt="logo"> <strong>Zdrowy Start</strong></div>
+    <div style="display: flex; align-items: center;"><img src="images/logo.png" alt="logo"> <strong>Zdrowy Start</strong></div>
     <nav>
-      <a href="#free">Plan Free</a>
-      <a href="#premium">Plan Premium</a>
-      <a href="#blog">Blog</a>
-      <a href="#about">O nas</a>
-      <a href="#contact">Kontakt</a>
+      <a href="free.html">Plan Free</a>
+      <a href="premium.html">Plan Premium</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">O nas</a>
+      <a href="contact.html">Kontakt</a>
     </nav>
   </header>
 
   <section class="hero">
-    <img src="https://i.imgur.com/L3PhsIV.png" alt="ebook premium zdrowy start">
+    <img src="images/ebook.png" alt="ebook premium zdrowy start">
     <div class="hero-content">
       <h1>UNIWERSALNY PLAN ZDROWEGO ODŻYWIANIA – WYBIERZ STYL ŻYCIA, NIE KOMPROMISY</h1>
-      <a href="#">Pobierz darmowy plan (2 dni)</a>
+      <a href="free.html">Pobierz darmowy plan (2 dni)</a>
     </div>
   </section>
 
   <section class="features">
     <div>
-      <img src="https://img.icons8.com/emoji/48/leaf-fluttering-in-wind.png" alt="fit">
+      <img src="images/fit.png" alt="fit">
       <p>Fit</p>
     </div>
     <div>
-      <img src="https://img.icons8.com/emoji/48/money-with-wings.png" alt="tanio">
+      <img src="images/tanio.png" alt="tanio">
       <p>Tanio</p>
     </div>
     <div>
-      <img src="https://img.icons8.com/emoji/48/broccoli.png" alt="wege">
+      <img src="images/wege.png" alt="wege">
       <p>Wegetariańsko</p>
     </div>
     <div>
-      <img src="https://img.icons8.com/emoji/48/cut-of-meat.png" alt="keto">
+      <img src="images/keto.png" alt="keto">
       <p>Keto</p>
     </div>
-  </section>
-
-  <section class="premium" id="premium">
-    <h2>ZAMÓW WERSJĘ PREMIUM</h2>
-    <p>Zdrowy Start to kompletne plany żywieniowe gotowe do wdrożenia.</p>
-    <div class="price">9,90 zł - Kup teraz</div>
-  </section>
-
-  <section id="blog">
-    <h2>PRZEPISY I WSKAZÓWKI</h2>
-    <p>Nowości, porady żywieniowe, darmowe przepisy i inspiracje zdrowego stylu życia.</p>
-  </section>
-
-  <section id="about">
-    <h2>O NAS</h2>
-    <p>Zdrowy Start to projekt tworzony przez specjalistów od żywienia i zdrowia.</p>
-  </section>
-
-  <section id="contact">
-    <h2>KONTAKT</h2>
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Imię" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
-      <button type="submit">Wyślij</button>
-    </form>
   </section>
 
   <footer>
