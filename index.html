@@ -3,137 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zdrowy Start – Twój plan zdrowego odżywiania</title>
+  <title>Zdrowy Start</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      color: #333;
-      background: linear-gradient(to bottom, #f7fdf7, #ffffff);
-      animation: fadeIn 1s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      background: #f5f7f8;
+      color: #1a1a1a;
     }
     header {
-      background: #ffffff;
-      padding: 2rem 1rem;
-      text-align: center;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    header h1 {
-      color: #2f855a;
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background: #ffffff;
-      padding: 1rem 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    header img {
+      height: 32px;
     }
     nav a {
-      color: #2f855a;
+      margin: 0 1rem;
+      color: #000;
       text-decoration: none;
       font-weight: 600;
-      position: relative;
-    }
-    nav a::after {
-      content: "";
-      display: block;
-      height: 2px;
-      width: 0;
-      background: #2f855a;
-      transition: width 0.3s;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-    }
-    nav a:hover::after {
-      width: 100%;
     }
     .hero {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      padding: 3rem 1rem;
-      background: url('https://i.imgur.com/L3PhsIV.png') center/cover no-repeat;
-      height: 450px;
-      text-align: center;
-      color: white;
-      position: relative;
+      padding: 4rem 2rem;
+      background: white;
     }
-    .hero h2 {
-      background: rgba(0,0,0,0.6);
-      padding: 1rem 2rem;
-      border-radius: 12px;
+    .hero img {
+      max-width: 300px;
+    }
+    .hero-content {
+      max-width: 50%;
+    }
+    .hero h1 {
       font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    section {
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      animation: fadeUp 0.8s ease;
-    }
-    @keyframes fadeUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .cta {
-      background: #edf7ed;
-      padding: 2rem;
-      border-radius: 12px;
-      text-align: center;
-    }
-    .cta a {
+    .hero a {
       display: inline-block;
-      background: #2f855a;
+      padding: 0.75rem 1.5rem;
+      background: #48bb78;
       color: white;
-      padding: 0.75rem 2rem;
-      margin-top: 1rem;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background 0.3s ease;
+      border-radius: 6px;
+      margin-top: 1rem;
     }
-    .cta a:hover {
-      background: #276749;
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 3rem 2rem;
+      background: #f9fafb;
     }
-    .plan {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
+    .features div {
       text-align: center;
-      margin-top: 2rem;
+      max-width: 160px;
     }
-    .plan div {
-      background: #f0fff4;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    .features img {
+      height: 40px;
+      margin-bottom: 0.5rem;
+    }
+    .premium {
+      padding: 3rem 2rem;
+      background: white;
+      text-align: center;
+    }
+    .premium h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .premium .price {
+      display: inline-block;
+      background: #c6f6d5;
+      color: #1a1a1a;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    section#about, section#contact {
+      padding: 3rem 2rem;
+      background: #f9fafb;
+      text-align: center;
     }
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
       max-width: 400px;
       margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-    input, textarea, select {
+    input, textarea {
       padding: 0.75rem;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-family: inherit;
     }
     button {
       padding: 0.75rem;
@@ -142,96 +111,76 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: #276749;
     }
     footer {
       background: #2f855a;
       color: white;
       text-align: center;
       padding: 2rem;
-      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Zdrowy Start</h1>
-    <p>Plan zdrowego odżywiania – Fit • Tanio • Wege • Keto</p>
+    <div><img src="https://img.icons8.com/color/48/leaf.png" alt="logo"> <strong>Zdrowy Start</strong></div>
+    <nav>
+      <a href="#free">Plan Free</a>
+      <a href="#premium">Plan Premium</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#free">Plan Free</a>
-    <a href="#premium">Plan Premium</a>
-    <a href="#about">O nas</a>
-    <a href="#order">Zamówienie</a>
-    <a href="#contact">Kontakt</a>
-  </nav>
-
   <section class="hero">
-    <h2>ZDROWY START – 14 DNIOWY PLAN</h2>
-  </section>
-
-  <section id="free">
-    <h2>Darmowy plan (2 dni)</h2>
-    <p>Pobierz przykładowy PDF zawierający 1 dzień z każdej wersji diety – idealny na start.</p>
-    <div class="cta">
-      <p><strong>Wypróbuj za darmo i zobacz efekty!</strong></p>
-      <a href="#">Pobierz darmowy plan</a>
+    <img src="https://i.imgur.com/L3PhsIV.png" alt="ebook">
+    <div class="hero-content">
+      <h1>UNIWERSALNY PLAN ZDROWEGO ODŻYWIANIA – WYBIERZ STYL ŻYCIA, NIE KOMPROMISY</h1>
+      <a href="#">Pobierz darmowy plan (2 dni)</a>
     </div>
   </section>
 
-  <section id="premium">
-    <h2>Wersja Premium (14 dni)</h2>
-    <p>Kompletny 14-dniowy plan z posiłkami, listami zakupów i poradami.</p>
-    <div class="plan">
-      <div><strong>Fit</strong><br/>Zbilansowany, aktywny styl życia</div>
-      <div><strong>Tanio</strong><br/>Niski koszt – maksymalna wartość</div>
-      <div><strong>Wege</strong><br/>Roślinna alternatywa</div>
-      <div><strong>Keto</strong><br/>Dieta niskowęglowodanowa</div>
+  <section class="features">
+    <div>
+      <img src="https://img.icons8.com/emoji/48/leaf-fluttering-in-wind.png" alt="fit">
+      <p>Fit</p>
     </div>
-    <div class="cta">
-      <p><strong>Tylko 9,90 zł – natychmiastowy dostęp</strong></p>
-      <a href="#order">Zamów PDF</a>
+    <div>
+      <img src="https://img.icons8.com/emoji/48/money-with-wings.png" alt="tanio">
+      <p>Tanio</p>
     </div>
+    <div>
+      <img src="https://img.icons8.com/emoji/48/broccoli.png" alt="wege">
+      <p>Wegetariańsko</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/emoji/48/cut-of-meat.png" alt="keto">
+      <p>Keto</p>
+    </div>
+  </section>
+
+  <section class="premium" id="premium">
+    <h2>ZAMÓW WERSJĘ PREMIUM</h2>
+    <p>Zdrowy Start to kompletne plany żywieniowe gotowe do wdrożenia.</p>
+    <div class="price">9,90 zł - Kup teraz</div>
   </section>
 
   <section id="about">
-    <h2>O projekcie Zdrowy Start</h2>
-    <p>Tworzymy praktyczne plany żywieniowe dla każdego – od osób zapracowanych po tych, którzy dopiero zaczynają swoją przygodę ze zdrowym stylem życia.</p>
-  </section>
-
-  <section id="order">
-    <h2>Zamów wersję premium</h2>
-    <form name="zamowienie" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Imię i nazwisko" required />
-      <input type="email" name="email" placeholder="Adres e-mail" required />
-      <input type="text" name="adres" placeholder="Adres (opcjonalnie)" />
-      <select name="plan">
-        <option value="fit">Dieta FIT</option>
-        <option value="tania">Dieta TANIO</option>
-        <option value="wege">Dieta WEGE</option>
-        <option value="keto">Dieta KETO</option>
-      </select>
-      <textarea name="wiadomosc" placeholder="Uwagi lub kod rabatowy (opcjonalnie)" rows="3"></textarea>
-      <button type="submit">Zamawiam za 9,90 zł</button>
-    </form>
+    <h2>ABOUT</h2>
+    <p>Zdrowy Start to projekt tworzony przez specjalistów od żywienia i zdrowia.</p>
   </section>
 
   <section id="contact">
-    <h2>Kontakt</h2>
+    <h2>CONTACT</h2>
     <form name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Imię" required />
-      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
       <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
       <button type="submit">Wyślij</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Zdrowy Start. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2025 Zdrowy Start. All rights reserved.</p>
   </footer>
 </body>
 </html>
