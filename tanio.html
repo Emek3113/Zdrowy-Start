@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanio | Zdrowy Start</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f3f4f6, #e0f7ec);
+      color: #222;
+    }
+    header {
+      background: white;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #2b7a4b;
+      font-weight: 600;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1589308078055-f882a4f16569') center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .content {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 5%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card h3 {
+      margin-bottom: 12px;
+      color: #2b7a4b;
+    }
+    footer {
+      background: #2b7a4b;
+      color: white;
+      text-align: center;
+      padding: 30px 5%;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Zdrowy Start</h2>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="fit.html">Fit</a>
+      <a href="tanio.html">Tanio</a>
+      <a href="wege.html">Wegetariańsko</a>
+      <a href="keto.html">Keto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Jedz zdrowo i TANIO – nie musisz wydawać majątku</h1>
+  </section>
+
+  <section class="content">
+    <h2 style="margin-bottom: 24px;">Porady na każdą kieszeń:</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Planowanie posiłków</h3>
+        <p>Dowiedz się, jak dzięki planowaniu posiłków zminimalizować marnowanie jedzenia i oszczędzać tygodniowo dziesiątki złotych.</p>
+      </div>
+      <div class="card">
+        <h3>Składniki bazowe</h3>
+        <p>Ryż, fasola, płatki owsiane – tanie produkty, które można wykorzystać na dziesiątki sposobów, bez nudy.</p>
+      </div>
+      <div class="card">
+        <h3>Listy zakupów</h3>
+        <p>Gotowe listy produktów do tanich i zbilansowanych posiłków, które nie nadwyrężą Twojego budżetu.</p>
+      </div>
+      <div class="card">
+        <h3>Domowe przepisy</h3>
+        <p>Odkryj tanie przepisy – smaczne zupy, dania jednogarnkowe i przekąski z prostych składników.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Zdrowy Start. Tanio nie znaczy gorzej – to nasza filozofia!
+  </footer>
+</body>
+</html>
