@@ -10,28 +10,35 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 2rem;
-      background: linear-gradient(to right, #fff, #e3f2fd);
-      color: #1565c0;
+      background: linear-gradient(to bottom right, #e0f7fa, #fff);
+      color: #006064;
     }
     h1 {
       font-size: 2.5rem;
-      border-bottom: 3px solid #64b5f6;
+      border-bottom: 3px solid #00acc1;
       padding-bottom: 0.5rem;
     }
-    .workout-day {
+    .training-day {
       margin-top: 2rem;
-      background: #ffffff;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      animation: slideIn 0.6s ease-in-out;
     }
-    .workout-day h2 {
-      color: #0d47a1;
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
     }
-    ol {
+    .day-header {
+      font-size: 1.4rem;
+      color: #004d40;
+      margin-bottom: 1rem;
+    }
+    ul {
       padding-left: 1.5rem;
     }
-    ol li {
+    ul li {
       margin-bottom: 0.5rem;
     }
     nav {
@@ -39,37 +46,64 @@
     }
     nav a {
       text-decoration: none;
-      color: #0d47a1;
+      color: #004d40;
       font-weight: 600;
       margin-right: 1.5rem;
     }
   </style>
 </head>
 <body>
-  <h1>Trening domowy – 14 dni</h1>
-  <div class="workout-day">
-    <h2>Dzień 1</h2>
-    <ol>
-      <li>Rozgrzewka – 5 minut (marsz w miejscu, pajacyki)</li>
-      <li>Przysiady – 3 serie po 15 powtórzeń</li>
-      <li>Deska (plank) – 3x30 sekund</li>
-      <li>Rozciąganie – 5 minut</li>
-    </ol>
+  <h1>Plan Treningowy 14 dni</h1>
+  <div id="training-container">
+    <!-- Dni treningowe będą dynamicznie dodane -->
   </div>
-  <div class="workout-day">
-    <h2>Dzień 2</h2>
-    <ol>
-      <li>Skakanka – 2 minuty</li>
-      <li>Wykroki – 3 serie po 10 na każdą nogę</li>
-      <li>Brzuszki – 3 serie po 20</li>
-      <li>Mostek biodrowy – 3 serie po 15</li>
-    </ol>
-  </div>
-  <!-- Dni 3-14 w analogicznej strukturze -->
-
   <nav>
     <a href="fit.html">← Powrót do FIT</a>
-    <a href="motywacja.html">Przejdź do Motywacji →</a>
+    <a href="index.html">Start →</a>
   </nav>
+
+  <script>
+    const trainingData = [
+      {
+        day: "Dzień 1",
+        plan: ["Rozgrzewka – 5 minut", "Pajacyki – 3x20", "Przysiady – 3x15", "Plank – 3x30 sek"]
+      },
+      {
+        day: "Dzień 2",
+        plan: ["Stretching – 5 minut", "Mountain climbers – 3x20", "Wykroki – 3x12", "Plank boczny – 2x30 sek na stronę"]
+      },
+      // Dni 3–14 w pętli:
+    ];
+
+    for(let i = 3; i <= 14; i++) {
+      trainingData.push({
+        day: `Dzień ${i}`,
+        plan: [
+          `Rozgrzewka – 5 minut`,
+          `Ćwiczenia główne – powtórz Dzień ${((i-1)%2)+1}`,
+          `Stretching – 5 minut`
+        ]
+      });
+    }
+
+    const container = document.getElementById("training-container");
+
+    trainingData.forEach(({day, plan}) => {
+      const section = document.createElement("div");
+      section.className = "training-day";
+      const title = document.createElement("div");
+      title.className = "day-header";
+      title.textContent = day;
+      const list = document.createElement("ul");
+      plan.forEach(step => {
+        const li = document.createElement("li");
+        li.textContent = step;
+        list.appendChild(li);
+      });
+      section.appendChild(title);
+      section.appendChild(list);
+      container.appendChild(section);
+    });
+  </script>
 </body>
 </html>
