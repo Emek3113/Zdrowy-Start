@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | Zdrowy Start</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #eef4f9;
+      color: #333;
+    }
+    header {
+      background: white;
+      padding: 20px 5%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #005377;
+    }
+    nav a:hover {
+      color: #002a3a;
+    }
+    .contact-section {
+      max-width: 800px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+    .contact-section h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #004766;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input, textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      padding: 12px;
+      font-size: 1rem;
+      background: #0077a1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #005377;
+    }
+    footer {
+      background: #002f3f;
+      color: white;
+      padding: 40px 5%;
+      text-align: center;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Zdrowy Start</h2>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="fit.html">Fit</a>
+      <a href="tanio.html">Tanio</a>
+      <a href="wege.html">Wegetariańsko</a>
+      <a href="keto.html">Keto</a>
+      <a href="free.html">Plan Free</a>
+      <a href="premium.html">Plan Premium</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">O nas</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h1>Skontaktuj się z nami</h1>
+    <form>
+      <div>
+        <label for="name">Imię i nazwisko:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="message">Wiadomość:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Wyślij wiadomość</button>
+    </form>
+  </section>
+
+  <footer>
+    Zdrowy Start – Kontakt © 2025
+  </footer>
+</body>
+</html>
