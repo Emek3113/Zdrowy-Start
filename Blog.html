@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Zdrowy Start</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f6f9fc;
+      color: #333;
+    }
+    header {
+      background: white;
+      padding: 20px 5%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #005377;
+    }
+    nav a:hover {
+      color: #002a3a;
+    }
+    .hero {
+      background: linear-gradient(to right, #99c9de, #e2eef6);
+      padding: 70px 5%;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: #002f3f;
+    }
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 5%;
+    }
+    .post {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      transition: all 0.3s ease;
+    }
+    .post:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .post h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #004a63;
+    }
+    .post p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    footer {
+      background: #002f3f;
+      color: white;
+      padding: 40px 5%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Zdrowy Start</h2>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="fit.html">Fit</a>
+      <a href="tanio.html">Tanio</a>
+      <a href="wege.html">Wegetariańsko</a>
+      <a href="keto.html">Keto</a>
+      <a href="free.html">Plan Free</a>
+      <a href="premium.html">Plan Premium</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">O nas</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Porady, przepisy i nowości</h1>
+  </section>
+
+  <section class="posts">
+    <div class="post">
+      <h2>Jak jeść zdrowo i nie przepłacać?</h2>
+      <p>Poznaj proste nawyki zakupowe, które poprawią Twoją dietę i oszczędzą pieniądze.</p>
+    </div>
+    <div class="post">
+      <h2>5 błędów w diecie ketogenicznej</h2>
+      <p>Unikaj pułapek i stosuj keto z głową. Dietetyk wyjaśnia najczęstsze problemy.</p>
+    </div>
+    <div class="post">
+      <h2>Roślinne źródła białka</h2>
+      <p>Idealne dla wegetarian i fleksitarian – zdrowe i łatwo dostępne produkty.</p>
+    </div>
+  </section>
+
+  <footer>
+    Zdrowy Start – Blog © 2025
+  </footer>
+</body>
+</html>
