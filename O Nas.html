@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O nas | Zdrowy Start</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f2f8fb;
+      color: #333;
+    }
+    header {
+      background: white;
+      padding: 20px 5%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #005377;
+    }
+    nav a:hover {
+      color: #002a3a;
+    }
+    .about-section {
+      padding: 60px 5%;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .about-section h1 {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      color: #004766;
+    }
+    .about-section p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .member {
+      flex: 1 1 200px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .member img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #002f3f;
+      color: white;
+      padding: 40px 5%;
+      text-align: center;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Zdrowy Start</h2>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="fit.html">Fit</a>
+      <a href="tanio.html">Tanio</a>
+      <a href="wege.html">Wegetariańsko</a>
+      <a href="keto.html">Keto</a>
+      <a href="free.html">Plan Free</a>
+      <a href="premium.html">Plan Premium</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">O nas</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h1>Poznajmy się bliżej</h1>
+    <p>"Zdrowy Start" to projekt, który powstał z potrzeby tworzenia nowoczesnych i przystępnych rozwiązań żywieniowych. Naszą misją jest dostarczanie wiedzy, planów żywieniowych oraz wsparcia, które pomoże Ci zadbać o swoje zdrowie niezależnie od stylu życia.</p>
+    <p>Nasz zespół to dietetycy, twórcy treści i pasjonaci zdrowego stylu życia. Wierzymy, że małe zmiany prowadzą do wielkich efektów.</p>
+
+    <div class="team">
+      <div class="member">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Anna">
+        <h3>Anna Kowalska</h3>
+        <p>Dietetyk kliniczny</p>
+      </div>
+      <div class="member">
+        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Marek">
+        <h3>Marek Nowak</h3>
+        <p>Twórca przepisów</p>
+      </div>
+      <div class="member">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Zosia">
+        <h3>Zofia Wiśniewska</h3>
+        <p>Marketing i blog</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Zdrowy Start – O nas © 2025
+  </footer>
+</body>
+</html>
