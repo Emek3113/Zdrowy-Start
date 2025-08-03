@@ -24,6 +24,11 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     blockquote {
       font-style: italic;
@@ -32,10 +37,17 @@
       margin-bottom: 1rem;
       border-left: 4px solid #ce93d8;
       padding-left: 1rem;
+      transition: background 0.3s;
+    }
+    blockquote:hover {
+      background: #f3e5f5;
     }
     ul {
       margin-top: 1rem;
       padding-left: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
     }
     nav {
       margin-top: 3rem;
@@ -50,36 +62,70 @@
 </head>
 <body>
   <h1>Motywacja i Samodyscyplina</h1>
-  <div class="motivation">
-    <blockquote>
-      "Nie musisz być najlepszy, wystarczy, że będziesz lepszy niż wczoraj."
-    </blockquote>
-    <blockquote>
-      "Twoje ciało potrafi więcej niż myślisz. Uwierz w siebie."
-    </blockquote>
-    <blockquote>
-      "Każdy dzień to nowa szansa, by zacząć od nowa."
-    </blockquote>
-
-    <h2>Cele tygodniowe</h2>
-    <ul>
-      <li>Tydzień 1: Wstawaj wcześniej o 15 minut.</li>
-      <li>Tydzień 2: Codziennie 5 minut medytacji.</li>
-      <li>Tydzień 3: Zrezygnuj z przetworzonego cukru.</li>
-      <li>Tydzień 4: Zwiększ ilość wody do 2l dziennie.</li>
-    </ul>
-
-    <h2>Wskazówki</h2>
-    <ul>
-      <li>Notuj postępy każdego dnia.</li>
-      <li>Znajdź partnera treningowego.</li>
-      <li>Nagradzaj się za konsekwencję.</li>
-    </ul>
+  <div class="motivation" id="motivation-container">
+    <!-- Cytaty będą załadowane dynamicznie -->
   </div>
 
   <nav>
     <a href="fit.html">← Powrót do FIT</a>
     <a href="index.html">Start →</a>
   </nav>
+
+  <script>
+    const container = document.getElementById('motivation-container');
+
+    const quotes = [
+      "Nie musisz być najlepszy, wystarczy, że będziesz lepszy niż wczoraj.",
+      "Twoje ciało potrafi więcej niż myślisz. Uwierz w siebie.",
+      "Każdy dzień to nowa szansa, by zacząć od nowa."
+    ];
+
+    const goals = [
+      "Tydzień 1: Wstawaj wcześniej o 15 minut.",
+      "Tydzień 2: Codziennie 5 minut medytacji.",
+      "Tydzień 3: Zrezygnuj z przetworzonego cukru.",
+      "Tydzień 4: Zwiększ ilość wody do 2l dziennie."
+    ];
+
+    const tips = [
+      "Notuj postępy każdego dnia.",
+      "Znajdź partnera treningowego.",
+      "Nagradzaj się za konsekwencję."
+    ];
+
+    const block = document.createElement('div');
+
+    quotes.forEach(q => {
+      const quote = document.createElement('blockquote');
+      quote.textContent = q;
+      block.appendChild(quote);
+    });
+
+    const goalHeader = document.createElement('h2');
+    goalHeader.textContent = 'Cele tygodniowe';
+    block.appendChild(goalHeader);
+
+    const goalList = document.createElement('ul');
+    goals.forEach(g => {
+      const li = document.createElement('li');
+      li.textContent = g;
+      goalList.appendChild(li);
+    });
+    block.appendChild(goalList);
+
+    const tipsHeader = document.createElement('h2');
+    tipsHeader.textContent = 'Wskazówki';
+    block.appendChild(tipsHeader);
+
+    const tipsList = document.createElement('ul');
+    tips.forEach(t => {
+      const li = document.createElement('li');
+      li.textContent = t;
+      tipsList.appendChild(li);
+    });
+    block.appendChild(tipsList);
+
+    container.appendChild(block);
+  </script>
 </body>
 </html>
