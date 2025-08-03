@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Free | Zdrowy Start</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+      color: #2d2d2d;
+    }
+    header {
+      background: #ffffff;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #006666;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #004c4c;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1603048291431-b6a2fd1baea4') center/cover no-repeat;
+      padding: 120px 30px;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      max-width: 850px;
+      margin: 0 auto;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+    .section {
+      padding: 60px 6%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #004c4c;
+    }
+    .plan-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card h3 {
+      color: #006666;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #004c4c;
+      color: white;
+      text-align: center;
+      padding: 40px 5%;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Zdrowy Start</h2>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="fit.html">Fit</a>
+      <a href="tanio.html">Tanio</a>
+      <a href="wege.html">Wegetariańsko</a>
+      <a href="keto.html">Keto</a>
+      <a href="free.html">Plan Free</a>
+      <a href="premium.html">Plan Premium</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">O nas</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Plan Free – Rozpocznij zdrowe życie bez kosztów</h1>
+  </section>
+
+  <section class="section">
+    <h2>Co zawiera darmowy plan?</h2>
+    <div class="plan-list">
+      <div class="card">
+        <h3>14 dni jadłospisu</h3>
+        <p>Codzienne, zbilansowane posiłki z łatwo dostępnych składników.</p>
+      </div>
+      <div class="card">
+        <h3>Porady dietetyczne</h3>
+        <p>Sprawdzone wskazówki jak jeść zdrowo i tanio jednocześnie.</p>
+      </div>
+      <div class="card">
+        <h3>Plan PDF</h3>
+        <p>Gotowy do pobrania i wydrukowania – pełna wygoda i kontrola.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Zdrowy Start – Darmowy plan zdrowego życia © 2025
+  </footer>
+</body>
+</html>
