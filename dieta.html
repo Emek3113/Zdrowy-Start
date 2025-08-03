@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dieta – Plan FIT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: linear-gradient(to bottom right, #fff, #e8f5e9);
+      color: #2e7d32;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1 {
+      font-size: 2.5rem;
+      border-bottom: 3px solid #66bb6a;
+      padding-bottom: 0.5rem;
+    }
+    .day-plan {
+      margin-top: 2rem;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .day-plan:hover {
+      transform: scale(1.02);
+    }
+    .day-plan h2 {
+      color: #1b5e20;
+    }
+    ul {
+      list-style: square;
+      padding-left: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      margin-top: 3rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #1b5e20;
+      font-weight: 600;
+      margin-right: 1.5rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Plan żywieniowy – 14 dni</h1>
+  <script>
+    const days = [
+      [
+        'Owsianka z malinami i migdałami (B: 15g, T: 8g, W: 45g)',
+        'Grillowany kurczak z kaszą bulgur i warzywami (B: 35g, T: 10g, W: 40g)',
+        'Sałatka grecka z tofu (B: 20g, T: 12g, W: 18g)'
+      ],
+      [
+        'Omlet ze szpinakiem i pomidorami (B: 18g, T: 10g, W: 5g)',
+        'Quinoa z warzywami i ciecierzycą (B: 22g, T: 9g, W: 38g)',
+        'Krem z dyni z pestkami i grzankami (B: 10g, T: 7g, W: 30g)'
+      ]
+    ];
+    for(let d=3; d<=14; d++){
+      days.push([
+        `Jajecznica z pełnoziarnistym chlebem (B: 20g, T: 14g, W: 22g)`,
+        `Makaron pełnoziarnisty z tuńczykiem i rukolą (B: 30g, T: 12g, W: 45g)`,
+        `Jogurt naturalny z orzechami i owocami (B: 15g, T: 10g, W: 25g)`
+      ]);
+    }
+  </script>
+  <div id="meal-plan"></div>
+
+  <nav>
+    <a href="fit.html">← Powrót do FIT</a>
+    <a href="trening.html">Przejdź do Treningu →</a>
+  </nav>
+
+  <script>
+    const container = document.getElementById('meal-plan');
+    days.forEach((meals, i) => {
+      const box = document.createElement('div');
+      box.className = 'day-plan';
+      const dayHeader = document.createElement('h2');
+      dayHeader.textContent = `Dzień ${i+1}`;
+      box.appendChild(dayHeader);
+      const list = document.createElement('ul');
+      ['Śniadanie', 'Lunch', 'Kolacja'].forEach((mealName, idx) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${mealName}:</strong> ${meals[idx]}`;
+        list.appendChild(li);
+      });
+      box.appendChild(list);
+      container.appendChild(box);
+    });
+  </script>
+</body>
+</html>
